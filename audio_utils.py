@@ -69,25 +69,21 @@ def extract_audio_features(audio_path):
     # ---------------------------------------
 
     tempo, _ = librosa.beat.beat_track(
-        y=y,
-        sr=sr
-    )
-    
+    y=y,
+    sr=sr
+)
+
 if isinstance(tempo, np.ndarray):
     tempo = float(tempo[0]) if tempo.size > 0 else 0.0
-    
-    return {
+else:
+    tempo = float(tempo)
 
-        "duration": round(duration, 2),
-
-        "pause_ratio": pause_ratio,
-
-        "rms_energy": round(rms_energy, 4),
-
-        "speech_rate": round(tempo, 2)
-
-    }
-
+return {
+    "duration": round(duration, 2),
+    "pause_ratio": pause_ratio,
+    "rms_energy": round(rms_energy, 4),
+    "speech_rate": round(tempo, 2)
+}
 
 # ----------------------------------------------------
 # Waveform Visualization
