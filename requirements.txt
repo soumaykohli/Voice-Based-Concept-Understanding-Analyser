@@ -1,11 +1,13 @@
 streamlit
 openai-whisper
-sentence-transformers
 torch
+sentence-transformers
+transformers
+scikit-learn
+numpy
 librosa
 soundfile
 matplotlib
 reportlab
 nltk
-numpy
-scikit-learn
+audioread
