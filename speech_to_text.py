@@ -1,6 +1,8 @@
 import os
+import platform
 
-os.environ["PATH"] += os.pathsep + r"C:\Users\souma\Downloads\ffmpeg-8.1.2-essentials_build\ffmpeg-8.1.2-essentials_build\bin"
+if platform.system() == "Windows":
+    os.environ["PATH"] += os.pathsep + r"C:\Users\souma\Downloads\ffmpeg-8.1.2-essentials_build\ffmpeg-8.1.2-essentials_build\bin"
 
 
 import whisper
