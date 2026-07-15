@@ -72,7 +72,10 @@ def extract_audio_features(audio_path):
         y=y,
         sr=sr
     )
-
+    
+if isinstance(tempo, np.ndarray):
+    tempo = float(tempo[0]) if tempo.size > 0 else 0.0
+    
     return {
 
         "duration": round(duration, 2),
@@ -81,7 +84,7 @@ def extract_audio_features(audio_path):
 
         "rms_energy": round(rms_energy, 4),
 
-        "speech_rate": round(float(tempo), 2)
+        "speech_rate": round(tempo, 2)
 
     }
 
