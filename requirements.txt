@@ -9,5 +9,3 @@ reportlab
 nltk
 numpy
 scikit-learn
-ffmpeg
-libsndfile1
