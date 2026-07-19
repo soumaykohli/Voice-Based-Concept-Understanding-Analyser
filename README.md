@@ -45,6 +45,10 @@ Ultimately, the VBCUA project demonstrates how responsibly designed AI can empow
 
 ## Installation
 
+**Deployed URL(Streamlit Community Cloud):**
+
+👉 **[Access the Deployment] https://voice-based-concept-understanding-analyser-gh3u9lyi9cnzn8vlpv5.streamlit.app/**
+
 ```bash
 pip install -r requirements.txt
 ```
